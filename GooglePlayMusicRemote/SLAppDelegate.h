@@ -9,6 +9,10 @@
 #import <Cocoa/Cocoa.h>
 
 @interface SLAppDelegate : NSObject <NSApplicationDelegate>
+{
+    NSAppleScript *script;
+    NSString *path;
+}
 
 @property (assign) IBOutlet NSWindow *window;
 

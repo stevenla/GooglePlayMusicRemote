@@ -10,6 +10,8 @@
 	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>stevenla.${PRODUCT_NAME:rfc1034identifier}</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -24,6 +26,8 @@
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.music</string>
+	<key>LSBackgroundOnly</key>
+	<false/>
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
 	<key>NSHumanReadableCopyright</key>

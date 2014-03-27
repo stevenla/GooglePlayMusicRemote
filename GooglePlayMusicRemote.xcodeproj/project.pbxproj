@@ -12,12 +12,14 @@
 		B08CE71718B9380C00E1C08D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B08CE71618B9380C00E1C08D /* main.m */; };
 		B08CE71B18B9380C00E1C08D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B08CE71918B9380C00E1C08D /* Credits.rtf */; };
 		B08CE71E18B9380C00E1C08D /* SLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B08CE71D18B9380C00E1C08D /* SLAppDelegate.m */; };
-		B08CE72118B9380C00E1C08D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08CE71F18B9380C00E1C08D /* MainMenu.xib */; };
 		B08CE72318B9380C00E1C08D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B08CE72218B9380C00E1C08D /* Images.xcassets */; };
 		B08CE72A18B9380C00E1C08D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08CE72918B9380C00E1C08D /* XCTest.framework */; };
 		B08CE72B18B9380C00E1C08D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08CE70A18B9380B00E1C08D /* Cocoa.framework */; };
 		B08CE73318B9380C00E1C08D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B08CE73118B9380C00E1C08D /* InfoPlist.strings */; };
 		B08CE73518B9380C00E1C08D /* GooglePlayMusicRemoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B08CE73418B9380C00E1C08D /* GooglePlayMusicRemoteTests.m */; };
+		B08CE74518B948B800E1C08D /* AppleMediaKeyController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08CE74318B948B800E1C08D /* AppleMediaKeyController.m */; };
+		B091470C18E3CE7500FB4661 /* controller.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B091470B18E3CE7500FB4661 /* controller.scpt */; };
+		B091479418E3D6E000FB4661 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08CE71F18B9380C00E1C08D /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,10 @@
 		B08CE73018B9380C00E1C08D /* GooglePlayMusicRemoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GooglePlayMusicRemoteTests-Info.plist"; sourceTree = "<group>"; };
 		B08CE73218B9380C00E1C08D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B08CE73418B9380C00E1C08D /* GooglePlayMusicRemoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GooglePlayMusicRemoteTests.m; sourceTree = "<group>"; };
+		B08CE74218B948B800E1C08D /* AppleMediaKeyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleMediaKeyController.h; sourceTree = "<group>"; };
+		B08CE74318B948B800E1C08D /* AppleMediaKeyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleMediaKeyController.m; sourceTree = "<group>"; };
+		B08CE74418B948B800E1C08D /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
+		B091470B18E3CE7500FB4661 /* controller.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = controller.scpt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 		B08CE71018B9380B00E1C08D /* GooglePlayMusicRemote */ = {
 			isa = PBXGroup;
 			children = (
+				B08CE74118B948A500E1C08D /* lib */,
 				B08CE71C18B9380C00E1C08D /* SLAppDelegate.h */,
 				B08CE71D18B9380C00E1C08D /* SLAppDelegate.m */,
 				B08CE71F18B9380C00E1C08D /* MainMenu.xib */,
@@ -127,6 +134,7 @@
 		B08CE71118B9380B00E1C08D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B091470B18E3CE7500FB4661 /* controller.scpt */,
 				B08CE71218B9380B00E1C08D /* GooglePlayMusicRemote-Info.plist */,
 				B08CE71318B9380B00E1C08D /* InfoPlist.strings */,
 				B08CE71618B9380C00E1C08D /* main.m */,
@@ -152,6 +160,16 @@
 				B08CE73118B9380C00E1C08D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B08CE74118B948A500E1C08D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B08CE74218B948B800E1C08D /* AppleMediaKeyController.h */,
+				B08CE74318B948B800E1C08D /* AppleMediaKeyController.m */,
+				B08CE74418B948B800E1C08D /* singleton.h */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,10 +249,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B091479418E3D6E000FB4661 /* MainMenu.xib in Resources */,
 				B08CE71518B9380B00E1C08D /* InfoPlist.strings in Resources */,
 				B08CE72318B9380C00E1C08D /* Images.xcassets in Resources */,
 				B08CE71B18B9380C00E1C08D /* Credits.rtf in Resources */,
-				B08CE72118B9380C00E1C08D /* MainMenu.xib in Resources */,
+				B091470C18E3CE7500FB4661 /* controller.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +274,7 @@
 			files = (
 				B08CE71718B9380C00E1C08D /* main.m in Sources */,
 				B08CE71E18B9380C00E1C08D /* SLAppDelegate.m in Sources */,
+				B08CE74518B948B800E1C08D /* AppleMediaKeyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +485,7 @@
 				B08CE73A18B9380C00E1C08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B08CE73B18B9380C00E1C08D /* Build configuration list for PBXNativeTarget "GooglePlayMusicRemoteTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +494,7 @@
 				B08CE73D18B9380C00E1C08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
