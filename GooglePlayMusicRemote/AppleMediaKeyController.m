@@ -70,12 +70,14 @@ CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef 
                 return NULL;
         break;
         case NX_KEYTYPE_FAST:
+        case NX_KEYTYPE_NEXT:
             if(keyState == NX_KEYSTATE_DOWN)
                 [center postNotificationName:MediaKeyNextNotification object:(__bridge AppleMediaKeyController *)refcon];
             if(keyState == NX_KEYSTATE_UP || keyState == NX_KEYSTATE_DOWN)
                 return NULL;
         break;
         case NX_KEYTYPE_REWIND:
+        case NX_KEYTYPE_PREVIOUS:
             if(keyState == NX_KEYSTATE_DOWN)
                 [center postNotificationName:MediaKeyPreviousNotification object:(__bridge AppleMediaKeyController *)refcon];
             if(keyState == NX_KEYSTATE_UP || keyState == NX_KEYSTATE_DOWN)
